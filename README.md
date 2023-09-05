@@ -1,4 +1,7 @@
 # Smart Home
+## Team members:
+* Mahmoud Ahmed Mohamed (Lead)
+* Ahmed Zahran
 ## Action Items:
 
 - [ ] AC ON/OFF according to temperature by LM35 or manually -> represented by LED
