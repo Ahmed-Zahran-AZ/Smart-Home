@@ -31,9 +31,9 @@ void Ac_Control(void)
 	_delay_ms(3);
 
 	Local_DigitaValue=ADC_U16GetDigitalValue(CHANNEL_0);
-	/* 2560 is a refrence voltage in mili volt cause reslution of sensor in mv */
+	/* 5000  is a refrence voltage in mili volt cause reslution of sensor in mv */
 	/* UL is  unsigned long */
-	Local_AnalogValue=(u16)((Local_DigitaValue*2560UL)/1024); /*calculate resolution*/
+	Local_AnalogValue=(u16)((Local_DigitaValue*5000UL)/1024); /*calculate resolution*/
 	TempValue= Local_AnalogValue/10; /*cause resolution of lm35 is 10 mv/c*/
 
 	LCD_VidSendStringPos("TempValue=",1,1);
@@ -72,7 +72,7 @@ void Ldr_Control(void)
 		DIO_VidSetPinValue(PORT_D,PIN4,DIO_LOW);
 	}
 	*/
-	_delay_ms(500);
+	_delay_ms(250);
 }
 
 

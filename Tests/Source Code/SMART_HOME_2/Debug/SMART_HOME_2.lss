@@ -1624,16 +1624,16 @@ _delay_loop_2(uint16_t __count)
      c44:	0e 94 79 07 	call	0xef2	; 0xef2 <ADC_U16GetDigitalValue>
      c48:	90 93 93 00 	sts	0x0093, r25
      c4c:	80 93 92 00 	sts	0x0092, r24
-	/* 2560 is a refrence voltage in mili volt cause reslution of sensor in mv */
+	/* 5000  is a refrence voltage in mili volt cause reslution of sensor in mv */
 	/* UL is  unsigned long */
-	Local_AnalogValue=(u16)((Local_DigitaValue*2560UL)/1024); /*calculate resolution*/
+	Local_AnalogValue=(u16)((Local_DigitaValue*5000UL)/1024); /*calculate resolution*/
      c50:	80 91 92 00 	lds	r24, 0x0092
      c54:	90 91 93 00 	lds	r25, 0x0093
      c58:	cc 01       	movw	r24, r24
      c5a:	a0 e0       	ldi	r26, 0x00	; 0
      c5c:	b0 e0       	ldi	r27, 0x00	; 0
-     c5e:	20 e0       	ldi	r18, 0x00	; 0
-     c60:	3a e0       	ldi	r19, 0x0A	; 10
+     c5e:	28 e8       	ldi	r18, 0x88	; 136
+     c60:	33 e1       	ldi	r19, 0x13	; 19
      c62:	40 e0       	ldi	r20, 0x00	; 0
      c64:	50 e0       	ldi	r21, 0x00	; 0
      c66:	bc 01       	movw	r22, r24
@@ -1781,7 +1781,7 @@ void Ldr_Control(void)
      d7a:	0e 94 b5 0f 	call	0x1f6a	; 0x1f6a <LCD_VidSendNumberPos>
      d7e:	80 e0       	ldi	r24, 0x00	; 0
      d80:	90 e0       	ldi	r25, 0x00	; 0
-     d82:	aa ef       	ldi	r26, 0xFA	; 250
+     d82:	aa e7       	ldi	r26, 0x7A	; 122
      d84:	b3 e4       	ldi	r27, 0x43	; 67
      d86:	8b 87       	std	Y+11, r24	; 0x0b
      d88:	9c 87       	std	Y+12, r25	; 0x0c
@@ -1920,7 +1920,7 @@ _delay_ms(double __ms)
 		DIO_VidSetPinValue(PORT_D,PIN4,DIO_LOW);
 	}
 	*/
-	_delay_ms(500);
+	_delay_ms(250);
 }
      e62:	60 96       	adiw	r28, 0x10	; 16
      e64:	0f b6       	in	r0, 0x3f	; 63
@@ -1943,7 +1943,7 @@ void ADC_VidInit(void)
      e76:	cf 93       	push	r28
      e78:	cd b7       	in	r28, 0x3d	; 61
      e7a:	de b7       	in	r29, 0x3e	; 62
-	/* select 2.56 v */
+	/* select 5 v */
 	SET_BIT(ADMUX,REFS0);
      e7c:	a7 e2       	ldi	r26, 0x27	; 39
      e7e:	b0 e0       	ldi	r27, 0x00	; 0
@@ -1952,13 +1952,13 @@ void ADC_VidInit(void)
      e84:	80 81       	ld	r24, Z
      e86:	80 64       	ori	r24, 0x40	; 64
      e88:	8c 93       	st	X, r24
-	SET_BIT(ADMUX,REFS1);
+	CLR_BIT(ADMUX,REFS1);
      e8a:	a7 e2       	ldi	r26, 0x27	; 39
      e8c:	b0 e0       	ldi	r27, 0x00	; 0
      e8e:	e7 e2       	ldi	r30, 0x27	; 39
      e90:	f0 e0       	ldi	r31, 0x00	; 0
      e92:	80 81       	ld	r24, Z
-     e94:	80 68       	ori	r24, 0x80	; 128
+     e94:	8f 77       	andi	r24, 0x7F	; 127
      e96:	8c 93       	st	X, r24
 
 	/* right adjust */

@@ -15,9 +15,9 @@
 
 void ADC_VidInit(void)
 {
-	/* select 2.56 v */
+	/* select 5 v */
 	SET_BIT(ADMUX,REFS0);
-	SET_BIT(ADMUX,REFS1);
+	CLR_BIT(ADMUX,REFS1);
 
 	/* right adjust */
 	CLR_BIT(ADMUX,ADLAR);
