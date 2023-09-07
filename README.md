@@ -1,4 +1,6 @@
 # Smart Home
+![PDS07September202307091646](https://github.com/Ahmed-Zahran-AZ/Smart-Home/assets/103266615/db3c50e1-0128-4662-9255-73bf8cb139db)
+
 ## Description:
 This is a smart home prototype with the following features:
 - A door lock that opens upon entering the correct PIN
