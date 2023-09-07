@@ -41,7 +41,7 @@ ISR(USART_RXC_vect){
 		else if(Local_Data_UART == '1')
 		{
 			DIO_VidSetPinValue(PORT_C,PIN_1,DIO_HIGH);
-			DIO_VidSetPinValue(PORT_C,PIN_2,DIO_LOW);
+			DIO_VidSetPinValue(PORT_C,PIN_2,DIO_LOW);		/*<-*/
 			DIO_VidSetPinValue(PORT_C,PIN_3,DIO_LOW);
 		}
 		else if(Local_Data_UART == '2')
