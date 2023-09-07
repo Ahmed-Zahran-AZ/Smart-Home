@@ -14,6 +14,7 @@
 #include "UART_PROJ.h"
 
 void main(void) {
+	DIO_VidSetPinDirection(PORT_D,PIN4,DIO_OUTPUT);
 	SET_BIT(SREG,7);
 	SET_BIT(UCSRB,RXCIE);
 	UART_VidInit();

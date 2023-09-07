@@ -61,6 +61,13 @@ void Ldr_Control(void)
 	Local_DigitaValue_LDR=ADC_U16GetDigitalValue(CHANNEL_1);
 	LCD_VidSendStringPos("LDR Read=",2,1);
 	LCD_VidSendNumberPos(Local_DigitaValue_LDR,2,11);
+	/*Controlling the three LEDs on C1,C2,C3*/
+	if(Local_DigitaValue_LDR < 171){
+		DIO_VidSetPinValue(PORT_D,PIN4,DIO_HIGH);
+	}
+	else{
+		DIO_VidSetPinValue(PORT_D,PIN4,DIO_LOW);
+	}
 	_delay_ms(500);
 }
 

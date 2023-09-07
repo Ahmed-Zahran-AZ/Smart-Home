@@ -163,7 +163,7 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x2452
+.text           0x00000000     0x2480
  *(.vectors)
  .vectors       0x00000000       0x54 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
                 0x00000000                __vectors
@@ -282,97 +282,97 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
                 0x00000b46      0x1d0 ./AC_TempSens.o
                 0x00000b46                Ac_Control
  .text.Ldr_Control
-                0x00000d16      0x142 ./AC_TempSens.o
+                0x00000d16      0x166 ./AC_TempSens.o
                 0x00000d16                Ldr_Control
  .text.ADC_VidInit
-                0x00000e58       0x7e ./ADC.o
-                0x00000e58                ADC_VidInit
+                0x00000e7c       0x7e ./ADC.o
+                0x00000e7c                ADC_VidInit
  .text.ADC_U16GetDigitalValue
-                0x00000ed6       0x6c ./ADC.o
-                0x00000ed6                ADC_U16GetDigitalValue
+                0x00000efa       0x6c ./ADC.o
+                0x00000efa                ADC_U16GetDigitalValue
  .text.DIO_VidSetPinDirection
-                0x00000f42      0x200 ./DIO_Prg.o
-                0x00000f42                DIO_VidSetPinDirection
+                0x00000f66      0x200 ./DIO_Prg.o
+                0x00000f66                DIO_VidSetPinDirection
  .text.DIO_VidSetPinValue
-                0x00001142      0x200 ./DIO_Prg.o
-                0x00001142                DIO_VidSetPinValue
+                0x00001166      0x200 ./DIO_Prg.o
+                0x00001166                DIO_VidSetPinValue
  .text.DIO_U8GetPinValue
-                0x00001342       0xf4 ./DIO_Prg.o
-                0x00001342                DIO_U8GetPinValue
+                0x00001366       0xf4 ./DIO_Prg.o
+                0x00001366                DIO_U8GetPinValue
  .text.DIO_VidSetPortValue
-                0x00001436       0x82 ./DIO_Prg.o
-                0x00001436                DIO_VidSetPortValue
+                0x0000145a       0x82 ./DIO_Prg.o
+                0x0000145a                DIO_VidSetPortValue
  .text.DIO_VidSetPortDirection
-                0x000014b8       0x82 ./DIO_Prg.o
-                0x000014b8                DIO_VidSetPortDirection
+                0x000014dc       0x82 ./DIO_Prg.o
+                0x000014dc                DIO_VidSetPortDirection
  .text.DIO_VidToggelPinValue
-                0x0000153a       0xfa ./DIO_Prg.o
-                0x0000153a                DIO_VidToggelPinValue
+                0x0000155e       0xfa ./DIO_Prg.o
+                0x0000155e                DIO_VidToggelPinValue
  .text.LCD_VidSendCMD
-                0x00001634      0x13c ./LCD.o
-                0x00001634                LCD_VidSendCMD
+                0x00001658      0x13c ./LCD.o
+                0x00001658                LCD_VidSendCMD
  .text.LCD_VidSendData
-                0x00001770      0x13c ./LCD.o
-                0x00001770                LCD_VidSendData
+                0x00001794      0x13c ./LCD.o
+                0x00001794                LCD_VidSendData
  .text.LCD_VidSendString
-                0x000018ac       0x52 ./LCD.o
-                0x000018ac                LCD_VidSendString
+                0x000018d0       0x52 ./LCD.o
+                0x000018d0                LCD_VidSendString
  .text.LCD_VidInit
-                0x000018fe      0x3ee ./LCD.o
-                0x000018fe                LCD_VidInit
+                0x00001922      0x3ee ./LCD.o
+                0x00001922                LCD_VidInit
  .text.LCD_VidCLR
-                0x00001cec      0x110 ./LCD.o
-                0x00001cec                LCD_VidCLR
+                0x00001d10      0x110 ./LCD.o
+                0x00001d10                LCD_VidCLR
  .text.LCD_VidSendNumber
-                0x00001dfc      0x152 ./LCD.o
-                0x00001dfc                LCD_VidSendNumber
+                0x00001e20      0x152 ./LCD.o
+                0x00001e20                LCD_VidSendNumber
  .text.LCD_VidSendNumberPos
-                0x00001f4e       0x44 ./LCD.o
-                0x00001f4e                LCD_VidSendNumberPos
+                0x00001f72       0x44 ./LCD.o
+                0x00001f72                LCD_VidSendNumberPos
  .text.LCD_VidSetCursorPos
-                0x00001f92       0x56 ./LCD.o
-                0x00001f92                LCD_VidSetCursorPos
+                0x00001fb6       0x56 ./LCD.o
+                0x00001fb6                LCD_VidSetCursorPos
  .text.LCD_VidSendCharPos
-                0x00001fe8       0x2c ./LCD.o
-                0x00001fe8                LCD_VidSendCharPos
+                0x0000200c       0x2c ./LCD.o
+                0x0000200c                LCD_VidSendCharPos
  .text.LCD_VidSendStringPos
-                0x00002014       0x32 ./LCD.o
-                0x00002014                LCD_VidSendStringPos
+                0x00002038       0x32 ./LCD.o
+                0x00002038                LCD_VidSendStringPos
  .text.UART_VidInit
-                0x00002046       0xca ./UART.o
-                0x00002046                UART_VidInit
+                0x0000206a       0xca ./UART.o
+                0x0000206a                UART_VidInit
  .text.UART_VidSendData
-                0x00002110       0x38 ./UART.o
-                0x00002110                UART_VidSendData
+                0x00002134       0x38 ./UART.o
+                0x00002134                UART_VidSendData
  .text.UART_VidReciveData
-                0x00002148       0x1e ./UART.o
-                0x00002148                UART_VidReciveData
+                0x0000216c       0x1e ./UART.o
+                0x0000216c                UART_VidReciveData
  .text.UART_VidSend_String
-                0x00002166       0x56 ./UART.o
-                0x00002166                UART_VidSend_String
+                0x0000218a       0x56 ./UART.o
+                0x0000218a                UART_VidSend_String
  .text.__vector_13
-                0x000021bc      0x140 ./UART_PROJ.o
-                0x000021bc                __vector_13
- .text.main     0x000022fc       0x3a ./main.o
-                0x000022fc                main
- .text.libgcc   0x00002336       0x3e c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
-                0x00002336                __mulsi3
- .text.libgcc   0x00002374       0x28 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
-                0x00002374                __udivmodhi4
- .text.libgcc   0x0000239c       0x44 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
-                0x0000239c                __udivmodsi4
- .text.libgcc   0x000023e0        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x000023e0        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .text.libgcc   0x000023e0        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .text.libgcc   0x000023e0       0x38 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
-                0x000023e0                __prologue_saves__
- .text.libgcc   0x00002418       0x36 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
-                0x00002418                __epilogue_restores__
-                0x0000244e                . = ALIGN (0x2)
+                0x000021e0      0x140 ./UART_PROJ.o
+                0x000021e0                __vector_13
+ .text.main     0x00002320       0x44 ./main.o
+                0x00002320                main
+ .text.libgcc   0x00002364       0x3e c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+                0x00002364                __mulsi3
+ .text.libgcc   0x000023a2       0x28 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                0x000023a2                __udivmodhi4
+ .text.libgcc   0x000023ca       0x44 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                0x000023ca                __udivmodsi4
+ .text.libgcc   0x0000240e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x0000240e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000240e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x0000240e       0x38 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+                0x0000240e                __prologue_saves__
+ .text.libgcc   0x00002446       0x36 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+                0x00002446                __epilogue_restores__
+                0x0000247c                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000244e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x0000244e                exit
-                0x0000244e                _exit
+ .fini9         0x0000247c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x0000247c                exit
+                0x0000247c                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -391,11 +391,11 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000244e        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x0000247c        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00002452                _etext = .
+                0x00002480                _etext = .
 
-.data           0x00800060       0x2e load address 0x00002452
+.data           0x00800060       0x2e load address 0x00002480
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
@@ -476,8 +476,8 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
                 0x00800092                Local_DigitaValue
                 0x00800094                Local_AnalogValue
                 0x00800096                PROVIDE (__bss_end, .)
-                0x00002452                __data_load_start = LOADADDR (.data)
-                0x00002480                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00002480                __data_load_start = LOADADDR (.data)
+                0x000024ae                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800096        0x0
                 0x00800096                PROVIDE (__noinit_start, .)
@@ -502,21 +502,21 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x1ed8
+.stab           0x00000000     0x1f08
  *(.stab)
- .stab          0x00000000      0x5f4 ./AC_TempSens.o
- .stab          0x000005f4      0x240 ./ADC.o
+ .stab          0x00000000      0x618 ./AC_TempSens.o
+ .stab          0x00000618      0x240 ./ADC.o
                                 0x48c (size before relaxing)
- .stab          0x00000834      0x4ec ./DIO_Prg.o
+ .stab          0x00000858      0x4ec ./DIO_Prg.o
                                 0x738 (size before relaxing)
- .stab          0x00000d20      0xa80 ./LCD.o
+ .stab          0x00000d44      0xa80 ./LCD.o
                                 0xccc (size before relaxing)
- .stab          0x000017a0      0x330 ./UART.o
+ .stab          0x000017c4      0x330 ./UART.o
                                 0x57c (size before relaxing)
- .stab          0x00001ad0      0x27c ./UART_PROJ.o
+ .stab          0x00001af4      0x27c ./UART_PROJ.o
                                 0x4c8 (size before relaxing)
- .stab          0x00001d4c      0x18c ./main.o
-                                0x3d8 (size before relaxing)
+ .stab          0x00001d70      0x198 ./main.o
+                                0x3e4 (size before relaxing)
 
 .stabstr        0x00000000      0xd18
  *(.stabstr)
