@@ -8,6 +8,7 @@ C_SRCS += \
 ../ADC.c \
 ../DIO_Prg.c \
 ../LCD.c \
+../Timer1.c \
 ../UART.c \
 ../UART_PROJ.c \
 ../main.c 
@@ -17,6 +18,7 @@ OBJS += \
 ./ADC.o \
 ./DIO_Prg.o \
 ./LCD.o \
+./Timer1.o \
 ./UART.o \
 ./UART_PROJ.o \
 ./main.o 
@@ -26,6 +28,7 @@ C_DEPS += \
 ./ADC.d \
 ./DIO_Prg.d \
 ./LCD.d \
+./Timer1.d \
 ./UART.d \
 ./UART_PROJ.d \
 ./main.d 

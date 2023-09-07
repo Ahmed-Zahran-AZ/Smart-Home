@@ -12,9 +12,10 @@
 #include "AC_TempSens.h"
 #include "UART.h"
 #include "UART_PROJ.h"
-
+#include "Timer1.h"
 void main(void) {
 	DIO_VidSetPinDirection(PORT_D,PIN4,DIO_OUTPUT);
+	TIMER1_VidInit();
 	SET_BIT(SREG,7);
 	SET_BIT(UCSRB,RXCIE);
 	UART_VidInit();
