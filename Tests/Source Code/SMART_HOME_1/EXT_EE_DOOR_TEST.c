@@ -19,6 +19,7 @@
 #include "EXT_EE_DOOR_TEST.h"
 
 
+#define EEPROM_ENABLE 0
 u16 Check_Save_address=0 ;
 u16 address[4]={1,2,3,4};
 
@@ -29,20 +30,22 @@ u8 First_Number[4],Second_Number[4];
 
 void DOOR_Control(void)
 {
-
+	u8 pin[] ="1234";
 
 	//Motor();
 	u8 Pass_Status;
 		LCD_VidInit();
 		KPD_VidInit();
-		TWT_VidMasterInit();
-		_delay_ms(100);
+		//TWT_VidMasterInit();
+		//_delay_ms(100);
 		KPD_VALUE=KPD_CHEK;
 
-		Pass_Status=EEPROM_VidReadByte(Check_Save_address); //problem
+		Pass_Status= 0; //problem
 		/*check if first time to enter pass or not */
+#if EEPROM_ENABLE
 		if(1 != Pass_Status)
 		{
+
 		    /*Set password for first time */
 
 			LCD_VidSendStringPos("Set ur PASS ",1,1);
@@ -57,10 +60,10 @@ void DOOR_Control(void)
 		    	_delay_ms(50);
 		    	LCD_VidSendCharPos('*',2,KPD_COUNTER);
 		    	password[KPD_COUNTER]=KPD_VALUE;
-		    	EEPROM_VidWriteByte(address[KPD_COUNTER-1],KPD_VALUE);
+		    	//EEPROM_VidWriteByte(address[KPD_COUNTER-1],KPD_VALUE);
 
 		   }
-		    EEPROM_VidWriteByte(Check_Save_address,1);
+		    //EEPROM_VidWriteByte(Check_Save_address,1);
 		    LCD_VidCLR();
 		    LCD_VidSendStringPos("Password saved",1,1);
 		    _delay_ms(200);
@@ -69,6 +72,10 @@ void DOOR_Control(void)
 		    /*CHECK PASSWORD*/
 		    LCD_VidCLR();
 		    _delay_ms(100);
+
+
+
+
 		    LCD_VidSendStringPos("Check ur PASS ",1,1);
 		    KPD_VALUE=KPD_CHEK;
 		    while(KPD_VALUE != '&')
@@ -120,11 +127,9 @@ void DOOR_Control(void)
 		    }
 
 		}
-		else
-		{
+#endif
+
 			/*CHECK PASSWORD*/
-				    LCD_VidCLR();
-				    _delay_ms(200);
 				    LCD_VidSendStringPos("Enter ur PASS ",1,1);
 				    KPD_VALUE=KPD_CHEK;
 				    while(KPD_VALUE != '&')
@@ -135,7 +140,7 @@ void DOOR_Control(void)
 				    		    CHK_COUNT++;
 				    		    if(KPD_VALUE == '&') break;
 				    		    LCD_VidSendNumberPos(KPD_VALUE,2,CHK_COUNT);
-				    		    _delay_ms(100);
+				    		    _delay_ms(50);
 				    		    LCD_VidSendCharPos('*',2,CHK_COUNT);
 				    		    Check_pass[CHK_COUNT]=KPD_VALUE;
 
@@ -143,9 +148,9 @@ void DOOR_Control(void)
 
 				    /*Check password is correct or not*/
 				    u8 x=0;
-				    for(x;x<4;x++)
+				    for(;x<4;x++)
 				    {
-				    if(Check_pass[x]==EEPROM_VidReadByte(address[x]))
+				    if(Check_pass[x] == pin[x])
 				    {
 				    	x++;
 				    }
@@ -177,4 +182,4 @@ void DOOR_Control(void)
 
 
 
-}
+
