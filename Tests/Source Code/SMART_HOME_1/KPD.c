@@ -50,10 +50,11 @@ u8 KPD_U8PressedKey(void)
 }
 
 
-u8 Checking_Pass(u8 Copy_U8arr1[],u8 Copy_U8arr2[],u8 CopyU8Number_Of_Digits)
+u8 Checking_Pass(u8* Copy_U8arr1,u8* Copy_U8arr2,u8 CopyU8Number_Of_Digits)
 {
 	u8 x=0,Internal_Counter=0;
-	for(x;x<CopyU8Number_Of_Digits;x++)
+
+	for(;x<CopyU8Number_Of_Digits;x++)
 	{
 		if(Copy_U8arr1[x] == Copy_U8arr2[x])
 		{

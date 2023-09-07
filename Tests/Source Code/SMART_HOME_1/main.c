@@ -24,4 +24,5 @@ void main()
 {
 	DIO_VidSetPinDirection(PORT_A,PIN_3,DIO_OUTPUT);
 	DOOR_Control();
+	while(1);
 }

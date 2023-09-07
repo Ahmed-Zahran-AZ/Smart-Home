@@ -22,5 +22,5 @@
 
 void KPD_VidInit(void);
 u8 KPD_U8PressedKey(void);
-u8 Checking_Pass(u8 Copy_U8arr1[],u8 Copy_U8arr2[],u8 CopyU8Number_Of_Digits);
+u8 Checking_Pass(u8* Copy_U8arr1,u8* Copy_U8arr2,u8 CopyU8Number_Of_Digits);
 #endif

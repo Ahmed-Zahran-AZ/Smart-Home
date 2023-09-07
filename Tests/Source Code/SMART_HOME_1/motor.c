@@ -39,7 +39,7 @@ void Motor(void)
 	}
 	LCD_VidSendStringPos("CLOSE SOON ..",2,1);
 
-	_delay_ms(500);
+	_delay_ms(2000);
 
     for(p;p<1;p++)     //close mode after half second
     	{
