@@ -1,5 +1,6 @@
 # Smart Home
-![PDS07September202307091646](https://github.com/Ahmed-Zahran-AZ/Smart-Home/assets/103266615/db3c50e1-0128-4662-9255-73bf8cb139db)
+![PDS07September202307164524](https://github.com/Ahmed-Zahran-AZ/Smart-Home/assets/103266615/d605bf48-7b57-4201-a60b-7b2a4986e355)
+
 
 ## Description:
 This is a smart home prototype with the following features:
@@ -12,6 +13,9 @@ This is a smart home prototype with the following features:
   - 1st is open
   - 1st and 2nd are open
   - 1st,2nd and 3rd are open
+
+## Future Improvements:
+- Setting the password first then saving it to EEPROM (either internal or external)
 
 ## Team members:
 * Mahmoud Ahmed Mohamed (Lead)
