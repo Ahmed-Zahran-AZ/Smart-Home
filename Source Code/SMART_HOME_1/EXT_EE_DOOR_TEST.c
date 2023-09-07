@@ -24,18 +24,19 @@ u16 address[4] = { 1, 2, 3, 4 };
 
 u8 NO_DIG = 0, KPD_VALUE = 255, KPD_COUNTER = 0;
 u8 password[4], Check_pass[4];
-
+u8 CHK_COUNT = 0;
 u8 First_Number[4], Second_Number[4];
-u8 pass_wrong_count = 0;
+
 void DOOR_Control(void) {
 
 	u8 pin[4] = {1,2,3,4};
 	//Motor();
 	u8 Pass_Status;
-
+	LCD_VidInit();
+	KPD_VidInit();
 	//TWT_VidMasterInit();
 	//_delay_ms(100);
-
+	KPD_VALUE = KPD_CHEK;
 
 	Pass_Status = 0; //problem
 	/*check if first time to enter pass or not */
@@ -127,11 +128,6 @@ void DOOR_Control(void) {
 #endif
 
 	/*CHECK PASSWORD*/
-while(1){
-	u8 CHK_COUNT = 0;
-	LCD_VidInit();
-	KPD_VidInit();
-	KPD_VALUE = KPD_CHEK;
 	LCD_VidSendStringPos("Enter the PIN ", 1, 1);
 	KPD_VALUE = KPD_CHEK;
 	while (KPD_VALUE != '&') {
@@ -149,6 +145,7 @@ while(1){
 		Check_pass[CHK_COUNT-1] = KPD_VALUE;
 
 	}
+
 	if (Checking_Pass(pin, Check_pass, 4)) {
 		/*starting words */
 
@@ -165,29 +162,18 @@ while(1){
 		/*Motor will open the Door*/
 		Motor();
 		DIO_VidSetPinValue(PORT_A, PIN_3, DIO_HIGH);
-		break;
+
 	}
 	else {
 		LCD_VidCLR();
 		LCD_VidSendStringPos("XXFailed LoginXX", 1, 1);
-		pass_wrong_count++;
 		_delay_ms(200);
 		LCD_VidCLR();
-		if(pass_wrong_count <3){
 		LCD_VidSendStringPos("Restart,Then", 1, 1);
 		LCD_VidSendStringPos("TRY AGAIN...", 2, 1);
-		_delay_ms(1000);
-		LCD_VidCLR();
-		}
-		else{
-			LCD_VidSendStringPos("3 wrong tries",1,1);
-			LCD_VidSendStringPos("Exiting....",2,1);
-			_delay_ms(2000);
-			while(1);
-		}
+
 	}
 
-}
 }
 
 
