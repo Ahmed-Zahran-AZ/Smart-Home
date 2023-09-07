@@ -15,7 +15,7 @@ This is a smart home prototype with the following features:
   - 1st,2nd and 3rd are open
 
 ## Future Improvements:
-- Setting the password first then saving it to EEPROM (either internal or external)
+- [ ] Setting the password first then saving it to EEPROM (either internal or external)
 
 ## Team members:
 * Mahmoud Ahmed Mohamed (Lead)
